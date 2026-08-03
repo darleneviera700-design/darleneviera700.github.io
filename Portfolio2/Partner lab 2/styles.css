@@ -1,0 +1,33 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 20px;
+}
+
+h1 {
+    color: #800020;
+    text-align: center;
+}
+
+p {
+    font-size: larger;
+}
+
+input[type="button"]:hover {
+    background-color: #800020;
+}
+
+.portfolio-return {
+  background-color: #111;
+  padding: 12px 25px;
+  text-align: right;
+}
+
+.portfolio-return a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.portfolio-return a:hover {
+  color: #d98b78;
+}

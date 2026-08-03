@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lesson 5: Partner Lab 2! An interactive website</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="userUpdates.js"></script>
+    </head>
+    <body>
+        <div class="portfolio-return">
+            <a href="../index.html">Return to Portfolio</a>
+        </div>
+        <h1 id="greeting">Hello User!</h1>
+        <p id="message">Greetings, fellow visitor! Welcome to Darlene and Jilliana's first interactive website.</p>
+
+        <p>Enter your name:</p>
+        <input type="text" id="name">
+        <br/>
+        <br/>
+
+        <p>Enter a brief message:</p>
+        <input type="text" id="userMessage">
+        <br/>
+        <br/>
+
+        <p>Select a background color:</p>
+
+        <select id="colors">
+            <option value="lightblue">Light Blue</option>
+            <option value="lightgreen">Light Green</option>
+            <option value="#C38D9E">Light Burgundy</option>
+            <option value="lightpink">Light Pink</option>
+            <option value="lightyellow">Light Yellow</option>
+        </select>
+        <br/>
+        <br/>
+
+        <input type="button" value="Submit" onclick="updatePage();">
+
+
+    </body>
+</html>

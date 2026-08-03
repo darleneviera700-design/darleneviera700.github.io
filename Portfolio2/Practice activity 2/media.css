@@ -1,0 +1,243 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #1b1b1b;
+    color: #f4ead7;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#container {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr;
+    grid-template-areas:
+        "header header header"
+        "sidebar content1 content1"
+        "sidebar content2 content3"
+        "footer footer footer";
+    gap: 12px;
+}
+
+header {
+    grid-area: header;
+    padding: 28px;
+    text-align: center;
+    background-color: #2a1d16;
+    color: #f4ead7;
+    border: 4px solid #b88a3b;
+}
+
+header h1 {
+    margin: 0;
+    color: #b88a3b;
+    letter-spacing: 2px;
+}
+
+header p {
+    margin-bottom: 0;
+}
+
+aside {
+    grid-area: sidebar;
+    padding: 20px;
+    background-color: #173f35;
+    color: #f4f4f4;
+    border: 4px solid #b88a3b;
+}
+
+aside h2 {
+    margin-top: 0;
+    color: #b88a3b;
+    text-align: center;
+}
+
+nav a {
+    display: block;
+    margin: 12px 0;
+    padding: 10px;
+    color: #f4ead7;
+    background-color: #214f43;
+    border-left: 4px solid #b88a3b;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #6b2433;
+    transform: translateX(6px);
+}
+
+main {
+    grid-area: content1;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #2f2118;
+    border: 4px solid #b88a3b;
+}
+
+.triangle-text {
+    width: 55%;
+}
+
+.triangle-text h2 {
+    color: #b88a3b;
+}
+
+.triangle-image-box {
+    width: 45%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #b88a3b;
+}
+
+.triangle-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%) contrast(115%);
+    transition: 0.4s;
+}
+
+.triangle-image-box:hover .triangle-image {
+    transform: scale(1.05);
+}
+
+.fog {
+    width: 180%;
+    height: 120%;
+    position: absolute;
+    top: -10%;
+    left: -80%;
+    z-index: 2;
+    background-image:
+        radial-gradient(
+            ellipse at 30% 50%,
+            rgba(244, 234, 215, 0.28) 0%,
+            rgba(244, 234, 215, 0.14) 35%,
+            transparent 70%
+        ),
+        radial-gradient(
+            ellipse at 70% 45%,
+            rgba(244, 234, 215, 0.22) 0%,
+            rgba(244, 234, 215, 0.10) 40%,
+            transparent 72%
+        );
+    
+    filter: blur(18px);
+    opacity: 0.75;
+
+    animation-name: fog-drift;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    pointer-events: none;
+}
+
+@keyframes fog-drift {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+#evidence {
+    grid-area: content2;
+    padding: 18px;
+    background-color: #2f2118;
+    border: 4px solid #b88a3b;
+}
+
+#evidence h2 {
+    color: #b88a3b;
+}
+
+.evidence-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    filter: sepia(100%) brightness(70%);
+    transition: 0.4s;
+}
+
+.evidence-image:hover {
+    filter: sepia(0%) brightness(100%);
+}
+
+#theories {
+    grid-area: content3;
+    padding: 18px;
+    background-color: #173f35;
+    border: 4px solid #b88a3b;
+}
+
+#theories h2 {
+    color: #b88a3b
+}
+
+.theory {
+    margin-bottom: 12px;
+    padding: 12px;
+    background-color: #2f2118;
+    border-left: 5px solid #6b2433;
+    transition: 0.3s;
+}
+
+.theory h3 {
+    margin-top: 0;
+    color: #b88a3b;
+}
+
+.theory:hover,
+.exhibit-card:hover,
+.evidence-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.45);
+}
+
+.exhibit-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    filter: sepia(80%);
+    transition: .04s;
+}
+
+.exhibit-card:hover img {
+    filter: sepia(20%);
+}
+
+footer {
+    grid-area: footer;
+    padding: 18px;
+    text-align: center;
+    background-color: #6b2433;
+    color: #f4ead7;
+    border: 4px solid #b88a3b;
+}
+
+.portfolio-return {
+  background-color: #111;
+  padding: 12px 25px;
+  text-align: right;
+}
+
+.portfolio-return a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.portfolio-return a:hover {
+  color: #d98b78;
+}
