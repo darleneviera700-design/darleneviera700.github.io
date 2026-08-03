@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14pt;
+    background-color: maroon;
+    color: goldenrod;
+    text-align: center;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+.menu-item img {
+    width: 175px;
+    margin-right: 20px;
+    border: 3px solid goldenrod;
+}
+
+.description {
+    text-align: center;
+}
+
+.footer-details {
+    display: block;
+}
+
+.contact {
+    display: block;
+}
+
+.directions {
+    display: none;
+}
+
+@media screen and (min-width: 901px) {
+    img {
+        width: 600px;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    img {
+        width: 250px;
+    }
+
+    .menu-item {
+        display: flex;
+        align-items: center;
+    }
+
+    .footer-details {
+        display: none;
+    }
+
+    .contact {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .menu-sections, footer {
+        display: none;
+    }
+
+    .directions {
+        display: block;
+        text-align: center;
+    }
+
+    .directions img {
+        width: 250px;
+        height: auto;
+    }
+}
+
+.portfolio-return {
+  background-color: #111;
+  padding: 12px 25px;
+  text-align: right;
+}
+
+.portfolio-return a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.portfolio-return a:hover {
+  color: #d98b78;
+}

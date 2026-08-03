@@ -1,0 +1,25 @@
+h1 {
+    text-align: center;
+    text-shadow: 3px 3px 3px maroon;
+}
+
+h2 {
+    text-align: center;
+    text-shadow: 3px 3px 3px maroon;
+}
+
+.portfolio-return {
+  background-color: #111;
+  padding: 12px 25px;
+  text-align: right;
+}
+
+.portfolio-return a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.portfolio-return a:hover {
+  color: #d98b78;
+}
